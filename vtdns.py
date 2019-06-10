@@ -16,7 +16,7 @@ import dns.query
 
 
 
-apikey = '412c99a2c965419816e0da1eacfd6008ce1d80ee8518d14c5e262b218fec1d53'  # API KEY #
+apikey = '412c99a2c965419816e0da1eacfd6008ce1d*******************'  # API KEY #
 
 requests.urllib3.disable_warnings()
 client = requests.session()
