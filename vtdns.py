@@ -178,51 +178,30 @@ print(domainErrors)
 
 
 f1 =open("domains.txt", "r")
-
 d1 = f1.read()
 domain=whois.query(str(d1))
-
 time1 = domain.creation_date
-
 time2 = datetime.now()
-
-
-
 print time1
-
-
 file=open("results2.txt","w")
-
 file.write(str(time1))
-
 file.close
-
 #read file
-
 f3=open("results2.txt","r")
-
 date1=f3.read()
 #delta will be added
 if '2019-05' in date1:
 	print "potential malware whois"
 else:
 	print "non malware whois"
-
-
 f4=open("results.txt","r")
-
 vt=f4.read()
-
 if ',0,' in vt:
 	print "non malware vt"
 else:
 	print "potential malware vt"
-
-
 #DNS query
-
 # nslookup/dig:
-
 qname = dns.name.from_text('gmaiil.com')
 q = dns.message.make_query(qname, dns.rdatatype.A)
 #print('The query is:')
@@ -238,9 +217,8 @@ ns_rrset = r.find_rrset(r.answer, qname, dns.rdataclass.IN, dns.rdatatype.A)
 #	print(rr.target)
 #print('')
 #print('')
-
 #if ( '2019' in date1 ) or ( ',0,' in vt):
 #	print "dns block"
-	
+...
 
 
